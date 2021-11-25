@@ -62,6 +62,13 @@ enum Tz_m {
     fourty_five
 }
 
+enum Axis {
+    //% block="主軸"
+    MAIN = 0,
+    //% block="第２軸"
+    SUB = 1
+}
+
 //% weight=2 color=#3276f4 icon="\uf0c2"
 namespace TFabTools {
     let writeWaitTime = 1000;
@@ -103,17 +110,19 @@ namespace TFabTools {
 
     /**
      * Sets a value to draw a graph.
-     * @param value draw value, eg;
+     * @param value draw value, eg; 0
+     * @param axis number axis, eg; Axis.MAIN
     */
-    //% blockId=draw_value block="Draw a graph of %value|"
+    //% blockId=draw_value 
+    //% block="Draw a graph of %value || %axis"
     //% group="TFabGraph"
     //% weight=1
-    export function drawGraph(value: number): void {
+    export function drawGraph(value: number, axis: Axis): void {
         if (serial_initialized == false) {
             serialInitialize();
             serial_initialized = true;
         }
-        let csv = '' + input.runningTime() + ',' + control.deviceSerialNumber() + ',d,TFabConnectLite,' + value;
+        let csv = '' + input.runningTime() + ',' + control.deviceSerialNumber() + ',d,'　+ axis + ',' + value;
         let hash = computeHash(csv);
         serial.writeLine(csv + ',' + hash);
         basic.pause(writeWaitTime);

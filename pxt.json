@@ -18,6 +18,10 @@
         "test.blocks"
     ],
     "public": false,
+    "targetVersions": {
+        "target": "4.0.16",
+        "targetId": "microbit"
+    },
     "supportedTargets": [
         "microbit"
     ],
