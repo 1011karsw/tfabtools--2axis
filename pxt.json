@@ -1,6 +1,6 @@
 {
-    "name": "tfabtools--2axis",
-    "version": "0.0.0",
+    "name": "pxt-tfabtools",
+    "version": "1.0.0",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -9,19 +9,17 @@
     },
     "files": [
         "README.md",
-        "main.blocks",
-        "main.ts"
+        "main.ts",
+        "_locales/ja/pxt-tfabtools-strings.json",
+        "_locales/ja/pxt-tfabtools-jsdoc-strings.json"
     ],
     "testFiles": [
-        "test.ts"
+        "test.ts",
+        "test.blocks"
     ],
-    "public": true,
-    "targetVersions": {
-        "target": "4.0.16",
-        "targetId": "microbit"
-    },
+    "public": false,
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
