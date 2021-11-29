@@ -117,7 +117,7 @@ namespace TFabTools {
     //% block="Draw a graph of %value || %axis"
     //% group="TFabGraph"
     //% weight=1
-    export function drawGraph(value: number, axis: Axis): void {
+    export function drawGraph(value: number, axis: Axis = Axis.MAIN): void {
         if (serial_initialized == false) {
             serialInitialize();
             serial_initialized = true;
