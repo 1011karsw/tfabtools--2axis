@@ -63,9 +63,9 @@ enum Tz_m {
 }
 
 enum Axis {
-    //% block="主軸"
+    //% block="main axis"
     MAIN = 0,
-    //% block="第２軸"
+    //% block="2nd axis"
     SUB = 1
 }
 
